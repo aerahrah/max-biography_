@@ -1,0 +1,123 @@
+$default-font-size: 1.6rem;
+$small-margin: 2rem;
+$medium-margin: 4rem;
+$big-margin: 8rem;
+
+$main-bg-color: #fdfcfa;
+$primary-color: #343a40;
+
+
+.small-bottom-margin{
+    margin-bottom: $small-margin;
+}
+.medium-bottom-margin{
+    margin-bottom: $medium-margin;
+}
+.big-bottom-margin{
+    margin-bottom: $big-margin;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    max-width: 900px;
+    min-width:400px;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    background-color: $main-bg-color;
+    color: $primary-color;
+    padding: 2rem 1.5rem;
+}
+main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $medium-margin;
+    font-size: $default-font-size;
+    margin-top: $medium-margin;
+    .left-container{
+        img{
+            border-radius: 2px;
+            width: 100%;
+            max-width: 460px;
+            height: auto;
+        }
+    }
+    .right-container{
+     
+    }
+
+}
+header{
+
+}
+.title{
+    width: 100%;
+    z-index: -2;
+}
+.name{
+    height: 8rem;
+    margin-bottom: $small-margin;
+    &__container{
+        display: block;
+    }
+}
+
+.text{
+    &__container-item{
+        text-align: justify;
+        line-height: 1.8;
+         &:not(:last-child){
+            margin-bottom: $small-margin;
+         }
+    }
+    
+}
+.heading-primary{
+    font-size: 7.6rem;
+    text-transform: uppercase;
+    letter-spacing: 2.6rem;
+    text-align: center;
+}
+.heading-secondary{
+    font-size: 2.8rem;
+
+}
+
+@media(max-width:560px){
+    main{
+        grid-template-columns: 1fr;
+        column-gap: $small-margin;
+        font-size: $default-font-size;
+        margin-top: small-margin;
+        .left-container{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            img{
+                border-radius: 1px;
+            }
+        }
+        .right-container{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    
+    }
+    .name{
+        margin: .5rem 0;
+        &__container{
+            text-align: center;
+        }
+    }
+    .heading-primary{
+        font-size: 4.6rem;
+        text-transform: uppercase;
+        letter-spacing: 1.3rem;
+        text-align: center;
+    }
+}
